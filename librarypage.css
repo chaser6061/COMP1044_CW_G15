@@ -1,0 +1,54 @@
+body {
+    box-sizing: border-box;
+    background: lightblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1000px;
+    background-color: aliceblue;
+    padding: 50px;
+    text-align: center;
+}
+
+.input-fields {
+    font-size:25px;
+    width: 100%;
+    max-width: 1000px;
+    font-family: 'Arial';
+}
+
+button:hover {
+    opacity: 0.8;
+  }
+
+.modal {
+    width: 100%; /* Full width */
+    max-width: 2000px;
+    height: 100%; /* Full height */
+    max-height: 2000px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modal_content {
+    width: 50%;
+    max-width: 2000px;
+    height: 50%;
+    max-height: 2000px;
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+}
