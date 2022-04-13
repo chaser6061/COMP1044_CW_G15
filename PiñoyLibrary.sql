@@ -130,4 +130,3 @@ INSERT INTO `BorrowDetails` VALUES
 INSERT INTO `Users` VALUES
 (2, 'admin', 'admin', 'john', 'smith');
 
---lknlkjl -s-uck
