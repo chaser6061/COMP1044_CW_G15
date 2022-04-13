@@ -31,7 +31,7 @@ button:hover {
 .modal {
     width: 100%; /* Full width */
     max-width: 2000px;
-    height: 100%; /* Full height */
+    height: 200%; /* Full height */
     max-height: 2000px;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
