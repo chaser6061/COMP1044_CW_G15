@@ -52,3 +52,13 @@ button:hover {
     text-align: center;
     padding: 30px;
 }
+
+.modal_content2 {
+    width: 50%;
+    max-width: 2000px;
+    height: 90%;
+    max-height: 2000px;
+    background-color: white;
+    text-align: center;
+    padding: 70px;
+}
