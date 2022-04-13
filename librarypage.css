@@ -18,7 +18,7 @@ h1 {
 }
 
 .input-fields {
-    font-size:25px;
+    font-size: 25px;
     width: 100%;
     max-width: 1000px;
     font-family: 'Arial';
@@ -26,12 +26,14 @@ h1 {
 
 button:hover {
     opacity: 0.8;
-  }
+}
 
 .modal {
-    width: 100%; /* Full width */
+    width: 100%;
+    /* Full width */
     max-width: 2000px;
-    height: 100%; /* Full height */
+    height: 200%;
+    /* Full height */
     max-height: 2000px;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
@@ -40,7 +42,6 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .modal_content {
@@ -51,4 +52,14 @@ button:hover {
     background-color: white;
     text-align: center;
     padding: 30px;
+}
+
+.modal_content2 {
+    width: 50%;
+    max-width: 2000px;
+    height: 90%;
+    max-height: 2000px;
+    background-color: white;
+    text-align: center;
+    padding: 70px;
 }
