@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="librarypage.css">
+
+<div class="modal">
+    <div class="modal_content2">
+        <form action="librarypage.html" method="post">
+            <h1>Update Borrow Details</h1>
+            Enter Book ID : <input class="input-fields" type="number" name="book_ID" value="" placeholder="Book ID" min="1" required>
+            <br><br><br><br>
+            Enter Borrow ID : <input class="input-fields" type="number" name="borrow_id" value="" placeholder="Category ID" min="1" required>
+            <br><br><br><br>
+            Choose Borrow Status :
+            <input type="radio" name="borrow_status" value="pending" required>pending
+            <input type="radio" name="borrow_status" value="returned" required>returned
+            <br><br><br><br>
+            Enter Date Return : <input class="input-fields" type="date" name="date_return" value="" required>
+            <br><br><br><br>
+            <button name="submit_button" type="submit" value="Submit">Submit</button>
+            <br><br>
+            <button onclick='location="librarypage.html"'>Back</button>
+        </form>
+    </div>
+</div>
+
+</head>
+</html>
