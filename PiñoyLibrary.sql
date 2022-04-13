@@ -110,7 +110,7 @@ INSERT INTO `Category` VALUES
 (8, 'General'),
 (9, 'References');
 
-INSERT INTO 'BorrowerType' VALUES
+INSERT INTO `BorrowerType` VALUES
 (2, 'Teacher'),
 (20, 'Employee'),
 (21, 'Non-Teaching'),
