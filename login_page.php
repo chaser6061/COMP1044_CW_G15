@@ -12,7 +12,7 @@ if ($conn->connect_error){
     die("Connection failed: ". $conn->connect_error);
 }
 //check username and password
-if(isset($_POST['login_button'])){ //when submit button is click
+if(isset($_POST['login_button'])){ //when login button is click
     $username = $_POST['username']; //get input in username
     $password = $_POST['password']; //get input in password
 
@@ -57,7 +57,7 @@ if (isset($_GET["login"])) {
             <br><br><br><br>
             Enter password : <input class="input-fields" type="password" name="password" value="" placeholder="Enter password" required>
             <br><br><br><br>
-            <button name="login_button" type="submit" value="login">Submit</button>
+            <button name="login_button" type="submit" value="login">Login</button>
             <br><br>
         </form>
     </div>
