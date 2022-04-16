@@ -5,7 +5,7 @@
 
 <div class="modal">
     <div class="modal_content2">
-        <form action="UpdateBorrowDetails.php" method="post">
+        <form action="DisplayBorrowDetails.php" method="post">
             <h1>Search Borrow Details</h1>
             Enter Book ID : <input class="input-fields" type="number" name="book_ID" value="" placeholder="Book ID" min="1" required>
             <br><br><br><br>
@@ -27,4 +27,17 @@ if (isset($_GET["Submit"])) {
         echo "<script>alert('No Borrow Details Found!!');</script>";
     }
 }
+
+if (isset($_GET["updated"])) {
+    if ($_GET["updated"] == "updateComplete") {
+        echo "<script>alert('Borrow Details Updated!');</script>";
+    }
+}
+
+if (isset($_GET["error"])) {
+    if ($_GET["error"] == "sqlfailed") {
+        echo "<script>alert('sql failed!');</script>";
+    }
+}
 ?>
+

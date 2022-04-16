@@ -26,4 +26,16 @@ if (isset($_GET["Submit"])) {
     }
 }
 
+if (isset($_GET["updated"])) {
+    if ($_GET["updated"] == "updateComplete") {
+        echo "<script>alert('Profile Updated!');</script>";
+    }
+}
+
+if (isset($_GET["error"])) {
+    if ($_GET["error"] == "sqlfailed") {
+        echo "<script>alert('sql failed!');</script>";
+    }
+}
+
 ?>

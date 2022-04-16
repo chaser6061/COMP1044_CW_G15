@@ -37,7 +37,7 @@ if(isset($_POST['submit_search_mem'])){ //when submit button is click
 
 <div class="modal">
     <div class="modal_content2">
-        <form action="" method="post">
+        <form action="UpdateMem.php?mid=<?php echo $row['MemberID'];?>" method="post">
             <h1>Display Member Details</h1>
             <h2>Change the values if you want to update member, else click back to return</h2>
             Choose which one to Update : <br><br><br><br>
@@ -68,7 +68,7 @@ if(isset($_POST['submit_search_mem'])){ //when submit button is click
             <input type="radio" name="status" value="Active" <?php if ($row['Status'] == "Active") {echo "checked";} ?> required>Active
             <input type="radio" name="status" value="Banned" <?php if ($row['Status'] == "Banned") {echo "checked";} ?> required>Banned
             <br><br><br><br>
-            <button name="submit_button" type="submit" value="Submit">Submit</button> <!--to update-->
+            <button name="update_mem_button" type="submit" value="Submit">Submit</button> <!--to update-->
             <br><br>
             <button name="delete_button" type="submit" value="Delete">Delete</button> <!--to delete-->
             <br><br>
