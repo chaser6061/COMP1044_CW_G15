@@ -43,7 +43,7 @@ if(isset($_POST['submit_search_book'])){ //when submit button is click
             <p>Date Receive : <?php echo $row['Date_Receive']; ?></p>
             <p>Date Added : <?php echo $row['Date_Added']; ?></p>
             <p>Status : <?php echo $row['Status']; ?></p>
-            <button name="submit_button" type="submit" value="Delete">Delete</button>
+            <button name="delete_button" type="submit" value="Delete">Delete</button>
             <br><br>
         </form>
         <button onclick='location="SearchBook.php"'>Back</button>

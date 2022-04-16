@@ -70,7 +70,7 @@ if(isset($_POST['submit_search_mem'])){ //when submit button is click
             <br><br><br><br>
             <button name="submit_button" type="submit" value="Submit">Submit</button> <!--to update-->
             <br><br>
-            <button name="submit_button" type="submit" value="Delete">Delete</button> <!--to delete-->
+            <button name="delete_button" type="submit" value="Delete">Delete</button> <!--to delete-->
             <br><br>
         </form>
         <button onclick='location="SearchMem.php"'>Back</button>
