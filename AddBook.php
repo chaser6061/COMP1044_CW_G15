@@ -17,11 +17,9 @@
         exit();
     }
 
-    $stmt = $conn->prepare("INSERT INTO book(Book_id,Title,Category_I,Author,Copies,Publisher,Publisher_Name,ISBN ,Copyright_Year,Date_Receive,Date_Added,Statos) Values(?,?,?,?,?,?,?,?,?,?,?,?)");
+    $stmt = $conn->prepare("INSERT INTO book(Book_id,Title,Category_ID,Author,Copies,Publisher,Publisher_Name,ISBN ,Copyright_Year,Date_Receive,Date_Added,Status) Values(?,?,?,?,?,?,?,?,?,?,?,?)");
     $stmt->bind_param("isisisssisss",$book_id,$book_title,$category_id,$author,$book_copies,$publisher,$publisher_name,$isbn,$copyright_year,$date_receive,$date_added,$status);
     $stmt->execute();
-    echo "<h1>Item Succesfully added 😊</h1>";
-
-
+    header("location: librarypage.php?addbook=InsertComplete");
 
 ?>
