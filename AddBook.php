@@ -20,6 +20,7 @@
     while($row = $MaxID_query->fetch_array()){
     $NewID = (int)$row[0] + 1;
     }
+<<<<<<< HEAD
     $stmt = $conn->prepare("INSERT INTO book(Book_id,Title,Category_I,Author,Copies,Publisher,Publisher_Name,ISBN ,Copyright_Year,Date_Receive,Date_Added,Statos) Values(?,?,?,?,?,?,?,?,?,?,?,?)");
     $stmt->bind_param("isisisssisss",$NewID,$book_title,$category_id,$author,$book_copies,$publisher,$publisher_name,$isbn,$copyright_year,$date_receive,$date_added,$status);
     $stmt->execute();
@@ -27,4 +28,10 @@
 
 
 
+=======
+    $stmt = $conn->prepare("INSERT INTO book(Book_id,Title,Category_ID,Author,Copies,Publisher,Publisher_Name,ISBN ,Copyright_Year,Date_Receive,Date_Added,Status) Values(?,?,?,?,?,?,?,?,?,?,?,?)");
+    $stmt->bind_param("isisisssisss",$NewID,$book_title,$category_id,$author,$book_copies,$publisher,$publisher_name,$isbn,$copyright_year,$date_receive,$date_added,$status);
+    $stmt->execute();
+    header("location: librarypage.php?addbook=InsertComplete");
+>>>>>>> a8a3b19e8db8d0c3c0e8be3c3fc2187d43ecd3c6
 ?>

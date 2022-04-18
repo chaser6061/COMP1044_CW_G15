@@ -21,6 +21,12 @@ if (isset($_GET["addbook"])) {
         echo "<script>alert('Item Succesfully added 😊');</script>";
     }
 }
+
+if (isset($_GET["addmem"])) {
+    if ($_GET["addmem"] == "InsertComplete") {
+        echo "<script>alert('Item Succesfully added 😊');</script>";
+    }
+}
 ?>
 </head>
 </html>

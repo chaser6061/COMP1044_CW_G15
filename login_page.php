@@ -21,7 +21,7 @@ if(isset($_POST['login_button'])){ //when login button is click
 
     if ($row = $result->fetch_assoc()){
         if ($password === $row["Password"]){
-            header("location: librarypage.html?login=successful");
+            header("location: librarypage.php?login=successful");
         }
         else{
             header("location: login_page.php?login=incorrectPassword");

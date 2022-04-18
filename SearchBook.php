@@ -11,7 +11,7 @@
             <br><br><br><br>
             <button name="submit_search_book" type="submit" value="Submit">Submit</button>
             <br><br><br><br>
-            <button onclick='location="librarypage.html"'>Back</button>
+            <button onclick='location="librarypage.php"'>Back</button>
         </form>
     </div>
 </div>
@@ -23,6 +23,18 @@
 if (isset($_GET["Submit"])) {
     if ($_GET["Submit"] == "noBookFound") {
         echo "<script>alert('No Book Found!!');</script>";
+    }
+}
+
+if (isset($_GET["delete"])) {
+    if ($_GET["delete"] == "deleteComplete") {
+        echo "<script>alert('Record deleted successfully!');</script>";
+    }
+}
+
+if (isset($_GET["error"])) {
+    if ($_GET["error"] == "sqlfailed") {
+        echo "<script>alert('Error deleting record: ');</script>";
     }
 }
 ?>

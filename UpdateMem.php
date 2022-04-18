@@ -41,7 +41,7 @@ if(isset($_POST['update_mem_button'])){
         exit();
     }
     else {
-        header("location: SearchMem.php?error=sqlfailed");
+        header("location: SearchMem.php?error=UpdateSqlFailed");
         exit();
     } 
 }

@@ -11,7 +11,7 @@
             <br><br><br><br>
             <button name="submit_search_mem" type="submit" value="Submit">Submit</button>
             <br><br><br><br>
-            <button onclick='location="librarypage.html"'>Back</button>
+            <button onclick='location="librarypage.php"'>Back</button>
         </form>
     </div>
 </div>
@@ -33,8 +33,17 @@ if (isset($_GET["updated"])) {
 }
 
 if (isset($_GET["error"])) {
-    if ($_GET["error"] == "sqlfailed") {
-        echo "<script>alert('sql failed!');</script>";
+    if ($_GET["error"] == "UpdateSqlFailed") {
+        echo "<script>alert('update sql failed!');</script>";
+    }
+    else if ($_GET["error"] == "DeleteSqlFailed"){
+        echo "<script>alert('delete sql failed!');</script>";
+    }
+}
+
+if (isset($_GET["delete"])) {
+    if ($_GET["delete"] == "deleteComplete") {
+        echo "<script>alert('Record deleted successfully!');</script>";
     }
 }
 
