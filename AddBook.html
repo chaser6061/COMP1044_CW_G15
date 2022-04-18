@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="librarypage.css">
+
+<div class="modal">
+    <div class="modal_content2">
+        <form action="AddBook.php" method="post">
+            <h1>Add Book</h1>
+            <br><br><br><br>
+            Enter Book Title : <input class="input-fields" type="text" name="book_title" value="" placeholder="Book Title" required>
+            <br><br><br><br>
+            Enter Category ID : <input class="input-fields" type="number" name="category_id" value="" placeholder="Category ID" min="1" max="9" required>
+            <br><br><br><br>
+            Enter Author : <input class="input-fields" type="text" name="author" value="" placeholder="Member Last Name" required>
+            <br><br><br><br>
+            Enter Amount of Copies : <input class="input-fields" type="number" name="book_copies" value="" placeholder="Amount of copies" min="1" required>
+            <br><br><br><br>
+            Enter Book Publisher : <input class="input-fields" type="text" name="publisher" value="" placeholder="Publisher" required>
+            <br><br><br><br>
+            Enter Book Publisher Name : <input class="input-fields" type="text" name="publisher_name" value="" placeholder="Publisher Name" required>
+            <br><br><br><br>
+            Enter Book ISBN : <input class="input-fields" type="tel" name="isbn" value="" placeholder="book ISBN" required>
+            <br><br><br><br>
+            Enter Copyright Year : <input class="input-fields" type="number" name="copyright_year" value="" placeholder="Amount of copies" min="1950" max="2022" required>
+            <br><br><br><br>
+            Enter Date received : <input class="input-fields" type="date" name="date_receive" value="" required>
+            <br><br><br><br>
+            Date Added: <input type="date" name="date_added">
+            <br><br><br><br>
+            Choose Book Status :
+            <input type="radio" name="status" value="New" required>New
+            <input type="radio" name="status" value="Old" required>Old
+            <input type="radio" name="status" value="Archive" required>Archive
+            <input type="radio" name="status" value="Damage" required>Damage
+            <input type="radio" name="status" value="Lost" required>Lost
+            <br><br><br><br>
+            <button name="submit_button" type="submit" value="Submit">Submit</button>
+            <br><br>
+            <button onclick='location="librarypage.html"'>Back</button>
+        </form>
+    </div>
+</div>
+
+</head>
+</html>
