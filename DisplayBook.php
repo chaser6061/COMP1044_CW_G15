@@ -29,7 +29,7 @@ if(isset($_POST['submit_search_book'])){ //when submit button is click
 
 <div class="modal">
     <div class="modal_content2">
-        <form action="" method="post">
+        <form action="DeleteBook.php?bid=<?php echo $row['Book_ID'];?>" method="post">
             <h1>Display Book</h1>
             <p>Book ID : <?php echo $row['Book_ID']; ?></p>
             <p>Book title : <?php echo $row['Title']; ?></p>
@@ -57,5 +57,5 @@ if(isset($_POST['submit_search_book'])){ //when submit button is click
     }
 } ?> <!--Closing bracket for if statement in line 15-->
 
-</head> 
+</head>  
 </html>

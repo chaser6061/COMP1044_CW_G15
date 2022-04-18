@@ -68,9 +68,11 @@ if(isset($_POST['submit_search_mem'])){ //when submit button is click
             <input type="radio" name="status" value="Active" <?php if ($row['Status'] == "Active") {echo "checked";} ?> required>Active
             <input type="radio" name="status" value="Banned" <?php if ($row['Status'] == "Banned") {echo "checked";} ?> required>Banned
             <br><br><br><br>
-            <button name="update_mem_button" type="submit" value="Submit">Submit</button> <!--to update-->
+            <button name="update_mem_button" type="submit" value="Submit">Update</button> <!--to update-->
             <br><br>
-            <button name="delete_button" type="submit" value="Delete">Delete</button> <!--to delete-->
+        </form>
+        <form action="DeleteMember.php?mid=<?php echo $row['MemberID'];?>" method="post">
+            <button name="delete_button" type="submit" value="Submit">Delete</button> <!--to delete-->
             <br><br>
         </form>
         <button onclick='location="SearchMem.php"'>Back</button>
@@ -84,5 +86,5 @@ if(isset($_POST['submit_search_mem'])){ //when submit button is click
     }
 }//closing bracket for line 15
 ?>
-</head>
+</head> 
 </html>

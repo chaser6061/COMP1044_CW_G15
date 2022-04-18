@@ -1,5 +1,4 @@
 <?php
-    $book_id = $_POST["book_id"];
     $book_title = $_POST["book_title"];
     $category_id = $_POST["category_id"];
     $author = $_POST["author"];
@@ -16,10 +15,13 @@
         echo "Failed to connect";
         exit();
     }
-
+    $sql = "SELECT MAX(Book_ID) as max_id FROM book";
+    $MaxID_query = $conn->query($sql);
+    while($row = $MaxID_query->fetch_array()){
+    $NewID = (int)$row[0] + 1;
+    }
     $stmt = $conn->prepare("INSERT INTO book(Book_id,Title,Category_ID,Author,Copies,Publisher,Publisher_Name,ISBN ,Copyright_Year,Date_Receive,Date_Added,Status) Values(?,?,?,?,?,?,?,?,?,?,?,?)");
-    $stmt->bind_param("isisisssisss",$book_id,$book_title,$category_id,$author,$book_copies,$publisher,$publisher_name,$isbn,$copyright_year,$date_receive,$date_added,$status);
+    $stmt->bind_param("isisisssisss",$NewID,$book_title,$category_id,$author,$book_copies,$publisher,$publisher_name,$isbn,$copyright_year,$date_receive,$date_added,$status);
     $stmt->execute();
     header("location: librarypage.php?addbook=InsertComplete");
-
 ?>

@@ -13,7 +13,7 @@
             <br><br><br><br>
             <button name="submit_search_borrowdetails" type="submit" value="Submit">Submit</button>
             <br><br><br><br>
-            <button onclick='location="librarypage.html"'>Back</button>
+            <button onclick='location="librarypage.php"'>Back</button>
         </form>
     </div>
 </div>
@@ -40,4 +40,3 @@ if (isset($_GET["error"])) {
     }
 }
 ?>
-
