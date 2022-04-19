@@ -4,37 +4,38 @@
 <link rel="stylesheet" href="librarypage.css">
 
 
+
 <div class="modal">
-    <div class = "modal_list">
-        <h1 class = "space">
+    <div class="center">
+        <h1>
             Library Webpage
         </h1>
-
-        <div class="space">
-        <button class="block" onclick='location="AddBook.html"'>Add Book</button><br>
+        <div class="btn-1">
+            <a href="AddBook.html"><span>Add Book</span></a>
         </div>
-
-        <div class="space">
-        <button class="block" onclick='location="AddMem.html"'>Add Member</button><br>
+        <br><br><br><br>
+        <div class="btn-1">
+            <a href="AddMem.html"><span>Add Member</span></a>
         </div>
-
-        <div class="space">
-        <button class="block" onclick='location="SearchBook.php"'>Search Book</button><br> <!--contain DisplayBook, which can do delete book function-->
+        <br><br><br><br>
+        <div class="btn-1">
+            <a href="SearchBook.php"><span>Search Book</span></a>
         </div>
-
-        <div class="space">
-        <button class="block" onclick='location="SearchMem.php"'>Search Member</button><br> <!--contain DisplayMem, which can do delete and update-->
+        <br><br><br><br>
+        <div class="btn-1">
+            <a href="SearchMem.php"><span>Search Member</span></a>
         </div>
-
-        <div class="space">
-        <button class="block" onclick='location="SearchBorrowDetails.php"'>Search Borrow Details</button><br> <!--contain UpdateBorrowDetails, which can do delete-->
+        <br><br><br><br>
+        <div class="btn-1">
+            <a href="SearchBorrowDetails.php"><span>Search Details</span></a>
         </div>
-
-        <div class="space">
-        <button class="block" onclick='location="login_page.php"'>Logout</button><br>
+        <br><br><br><br>
+        <div class="btn-1">
+            <a href="login_page.php"><span>Logout</span></a>
         </div>
-    </div>
+    </div> 
 </div>
+
 
 <?php 
 if (isset($_GET["addbook"])) {
