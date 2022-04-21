@@ -13,9 +13,9 @@ if ($conn->connect_error){
 }
 
 if(isset($_POST['submit_search_mem'])){ //when submit button is click
-    $member_ID = $_POST['MemberID']; //get input in book title
+    $member_ID = $_POST['Member_ID']; //get input in book title
 
-    $sql = "SELECT * FROM member WHERE MemberID = '$member_ID'";
+    $sql = "SELECT * FROM member WHERE Member_ID = '$member_ID'";
     $result = $conn->query($sql);
 
     if ($row = $result->fetch_assoc()){ //if member ID input is found in database
@@ -37,7 +37,7 @@ if(isset($_POST['submit_search_mem'])){ //when submit button is click
 
 <div class="modal">
     <div class="modal_content2">
-        <form action="UpdateMem.php?mid=<?php echo $row['MemberID'];?>" method="post">
+        <form action="UpdateMem.php?mid=<?php echo $row['Member_ID'];?>" method="post">
             <h1>Display Member Details</h1>
             <h2>Change the values if you want to update member, else click back to return</h2>
             Choose which one to Update : <br><br><br><br>
@@ -71,7 +71,7 @@ if(isset($_POST['submit_search_mem'])){ //when submit button is click
             <button name="update_mem_button" type="submit" value="Submit">Update</button> <!--to update-->
             <br><br>
         </form>
-        <form action="DeleteMember.php?mid=<?php echo $row['MemberID'];?>" method="post">
+        <form action="DeleteMember.php?mid=<?php echo $row['Member_ID'];?>" method="post">
             <button name="delete_button" type="submit" value="Submit">Delete</button> <!--to delete-->
             <br><br>
         </form>

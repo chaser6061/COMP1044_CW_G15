@@ -15,7 +15,7 @@ if ($conn->connect_error){
 if(isset($_POST['delete_button'])){
     $mid = $_GET['mid']; //member ID entered in SearchMem.php
 
-    $sql = "DELETE FROM member WHERE MemberID = '$mid'";
+    $sql = "DELETE FROM member WHERE Member_ID = '$mid'";
     $result = $conn->query($sql);
 
     if ($result === TRUE){

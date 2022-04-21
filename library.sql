@@ -170,7 +170,7 @@ CREATE TABLE `member` (
   `FirstName` varchar(12) DEFAULT NULL,
   `LastName` varchar(9) DEFAULT NULL,
   `Gender` varchar(6) DEFAULT NULL,
-  `Address` varchar(13) DEFAULT NULL,
+  `Address` varchar(255) DEFAULT NULL,
   `Contact` int(40) DEFAULT NULL,
   `Type` varchar(7) DEFAULT NULL,
   `YearLevel` varchar(11) DEFAULT NULL,

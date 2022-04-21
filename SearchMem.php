@@ -7,7 +7,7 @@
     <div class="modal_content2">
         <form action="DisplayMem.php" method="post">
             <h1>Search For Member</h1>
-            Enter Member ID : <input class="input-fields" type="text" name="MemberID" value="" placeholder="Member ID" required>
+            Enter Member ID : <input class="input-fields" type="text" name="Member_ID" value="" placeholder="Member ID" required>
             <br><br><br><br>
             <button name="submit_search_mem" type="submit" value="Submit">Submit</button>
             <br><br><br><br>

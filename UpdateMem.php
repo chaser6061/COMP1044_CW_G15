@@ -33,7 +33,7 @@ if(isset($_POST['update_mem_button'])){
             Type = '$Type',
             YearLevel = '$YearLevel',
             Status = '$status'
-            WHERE MemberID = '$mid'";
+            WHERE Member_ID = '$mid'";
     $result = $conn->query($sql);
 
     if ($result === TRUE){
