@@ -10,7 +10,7 @@
     $date_receive = $_POST["date_receive"];
     $date_added = $_POST["date_added"];
     $status = $_POST["status"];
-    $conn = new mysqli("localhost","root","","piñoylibrary");
+    $conn = new mysqli("localhost","root","","library");
     if($conn->connect_error){
         echo "Failed to connect";
         exit();
