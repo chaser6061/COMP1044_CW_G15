@@ -275,20 +275,20 @@ ALTER TABLE `users`
 -- Constraints for table `book`
 --
 ALTER TABLE `book`
-  ADD CONSTRAINT `book_ibfk_1` FOREIGN KEY (`Category_ID`) REFERENCES `category` (`Category_ID`);
+  ADD CONSTRAINT `book_ibfk_1` FOREIGN KEY (`Category_ID`) REFERENCES `category` (`Category_ID`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `borrow`
 --
 ALTER TABLE `borrow`
-  ADD CONSTRAINT `borrow_ibfk_1` FOREIGN KEY (`Member_ID`) REFERENCES `member` (`Member_ID`);
+  ADD CONSTRAINT `borrow_ibfk_1` FOREIGN KEY (`Member_ID`) REFERENCES `member` (`Member_ID`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `borrowdetails`
 --
 ALTER TABLE `borrowdetails`
-  ADD CONSTRAINT `borrowdetails_ibfk_1` FOREIGN KEY (`Book_ID`) REFERENCES `book` (`Book_ID`),
-  ADD CONSTRAINT `borrowdetails_ibfk_2` FOREIGN KEY (`Borrow_ID`) REFERENCES `borrow` (`Borrow_ID`);
+  ADD CONSTRAINT `borrowdetails_ibfk_1` FOREIGN KEY (`Book_ID`) REFERENCES `book` (`Book_ID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `borrowdetails_ibfk_2` FOREIGN KEY (`Borrow_ID`) REFERENCES `borrow` (`Borrow_ID`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
