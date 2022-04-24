@@ -20,7 +20,7 @@ if(isset($_POST['update_mem_button'])){
     $Gender = $_POST['Gender'];
     $Address = $_POST['address'];
     $contact = $_POST['contact'];
-    $Type = $_POST['Type'];
+    $ID = $_POST['ID'];
     $YearLevel = $_POST['yearlevel'];
     $status = $_POST['status'];
 
@@ -30,10 +30,10 @@ if(isset($_POST['update_mem_button'])){
             Gender = '$Gender',
             Address = '$Address',
             Contact = '$contact',
-            Type = '$Type',
+            ID = '$ID',
             YearLevel = '$YearLevel',
             Status = '$status'
-            WHERE Member_ID = '$mid'";
+            WHERE Member_ID = '$mid'"; 
     $result = $conn->query($sql);
 
     if ($result === TRUE){

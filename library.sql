@@ -3,10 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2022 at 03:13 PM
+-- Generation Time: Apr 23, 2022 at 03:58 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
-
+CREATE DATABASE library;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -131,7 +131,7 @@ INSERT INTO `borrowertype` (`ID`, `Borrower_Type`) VALUES
 (20, 'Employee'),
 (21, 'Non-Teaching'),
 (22, 'Student'),
-(32, 'Conruction');
+(32, 'Contruction');
 
 -- --------------------------------------------------------
 
@@ -172,7 +172,7 @@ CREATE TABLE `member` (
   `Gender` varchar(6) DEFAULT NULL,
   `Address` varchar(255) DEFAULT NULL,
   `Contact` int(40) DEFAULT NULL,
-  `Type` varchar(7) DEFAULT NULL,
+  `ID` int(2) DEFAULT NULL,
   `YearLevel` varchar(11) DEFAULT NULL,
   `Status` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -181,20 +181,20 @@ CREATE TABLE `member` (
 -- Dumping data for table `member`
 --
 
-INSERT INTO `member` (`Member_ID`, `FirstName`, `LastName`, `Gender`, `Address`, `Contact`, `Type`, `YearLevel`, `Status`) VALUES
-(52, 'Mark', 'Sanchez', 'Male', 'Talisay', 212010, 'Teacher', 'Faculty', 'Active'),
-(53, 'April Joy', 'Aguilar', 'Female', 'E.B. Magalona', 0, 'Student', 'Second Year', 'Banned'),
-(54, 'Alfonso', 'Pancho', 'Male', 'E.B. Magalona', 9, 'Student', 'First Year', 'Active'),
-(55, 'Jonathan ', 'Antanilla', 'Male', 'E.B. Magalona', 32, 'Student', 'Fourth Year', 'Active'),
-(56, 'Renzo Bryan', 'Pedroso', 'Male', 'Silay City', 3030, 'Student', 'Third Year', 'Active'),
-(57, 'Eleazar', 'Duterte', 'Male', 'E.B. Magalona', 90902, 'Student', 'Second Year', 'Active'),
-(58, 'Ellen Mae', 'Espino', 'Female', 'E.B. Magalona', 123, 'Student', 'First Year', 'Active'),
-(59, 'Ruth', 'Magbanua', 'Female', 'E.B. Magalona', 9340, 'Student', 'Second Year', 'Active'),
-(60, 'Shaina Marie', 'Gabino', 'Female', 'Silay City', 132134, 'Student', 'Second Year', 'Active'),
-(62, 'Chairty Joy', 'Punzalan', 'Female', 'E.B. Magalona', 12423, 'Teacher', 'Faculty', 'Active'),
-(63, 'Kristine May', 'Dela Rosa', 'Female', 'Silay City', 1321, 'Student', 'Second Year', 'Active'),
-(64, 'Chinie marie', 'Laborosa', 'Female', 'E.B. Magalona', 902101, 'Student', 'Second Year', 'Active'),
-(65, 'Ruby', 'Morante', 'Female', 'E.B. Magalona', 0, 'Teacher', 'Faculty', 'Active');
+INSERT INTO `member` (`Member_ID`, `FirstName`, `LastName`, `Gender`, `Address`, `Contact`, `ID`, `YearLevel`, `Status`) VALUES
+(52, 'Mark', 'Sanchez', 'Male', 'Talisay', 212010, 2, 'Faculty', 'Active'),
+(53, 'April Joy', 'Aguilar', 'Female', 'E.B. Magalona', 0, 22, 'Second Year', 'Banned'),
+(54, 'Alfonso', 'Pancho', 'Male', 'E.B. Magalona', 9, 22, 'First Year', 'Active'),
+(55, 'Jonathan ', 'Antanilla', 'Male', 'E.B. Magalona', 32, 22, 'Fourth Year', 'Active'),
+(56, 'Renzo Bryan', 'Pedroso', 'Male', 'Silay City', 3030, 22, 'Third Year', 'Active'),
+(57, 'Eleazar', 'Duterte', 'Male', 'E.B. Magalona', 90902, 22, 'Second Year', 'Active'),
+(58, 'Ellen Mae', 'Espino', 'Female', 'E.B. Magalona', 123, 22, 'First Year', 'Active'),
+(59, 'Ruth', 'Magbanua', 'Female', 'E.B. Magalona', 9340, 22, 'Second Year', 'Active'),
+(60, 'Shaina Marie', 'Gabino', 'Female', 'Silay City', 132134, 22, 'Second Year', 'Active'),
+(62, 'Chairty Joy', 'Punzalan', 'Female', 'E.B. Magalona', 12423, 2, 'Faculty', 'Active'),
+(63, 'Kristine May', 'Dela Rosa', 'Female', 'Silay City', 1321, 22, 'Second Year', 'Active'),
+(64, 'Chinie marie', 'Laborosa', 'Female', 'E.B. Magalona', 902101, 22, 'Second Year', 'Active'),
+(65, 'Ruby', 'Morante', 'Female', 'E.B. Magalona', 0, 2, 'Faculty', 'Active');
 
 -- --------------------------------------------------------
 
@@ -259,7 +259,8 @@ ALTER TABLE `category`
 -- Indexes for table `member`
 --
 ALTER TABLE `member`
-  ADD PRIMARY KEY (`Member_ID`);
+  ADD PRIMARY KEY (`Member_ID`),
+  ADD KEY `ID` (`ID`);
 
 --
 -- Indexes for table `users`
@@ -289,6 +290,12 @@ ALTER TABLE `borrow`
 ALTER TABLE `borrowdetails`
   ADD CONSTRAINT `borrowdetails_ibfk_1` FOREIGN KEY (`Book_ID`) REFERENCES `book` (`Book_ID`) ON DELETE CASCADE,
   ADD CONSTRAINT `borrowdetails_ibfk_2` FOREIGN KEY (`Borrow_ID`) REFERENCES `borrow` (`Borrow_ID`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `member`
+--
+ALTER TABLE `member`
+  ADD CONSTRAINT `member_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `borrowertype` (`ID`) ON UPDATE CASCADE ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

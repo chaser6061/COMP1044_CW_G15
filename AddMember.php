@@ -4,7 +4,7 @@
     $Gender = $_POST["Gender"];
     $address = $_POST["address"];
     $contact = $_POST["contact"];
-    $Type = $_POST["Type"];
+    $ID = $_POST["ID"];
     $yearlevel = $_POST["yearlevel"];
     $status = $_POST["status"];
     $conn = new mysqli("localhost","root","","library"); 
@@ -17,8 +17,8 @@
     while($row = $MaxID_query->fetch_array()){
     $NewID = (int)$row[0] + 1;
     }
-    $stmt = $conn->prepare("INSERT INTO member(Member_ID,FirstName,LastName,Gender,Address,Contact,Type,YearLevel,Status) Values(?,?,?,?,?,?,?,?,?)");
-    $stmt->bind_param("issssisss", $NewID,$FirstName,$LastName,$Gender,$address,$contact,$Type,$yearlevel,$status);
+    $stmt = $conn->prepare("INSERT INTO member(Member_ID,FirstName,LastName,Gender,Address,Contact,ID,YearLevel,Status) Values(?,?,?,?,?,?,?,?,?)");
+    $stmt->bind_param("issssiiss", $NewID,$FirstName,$LastName,$Gender,$address,$contact,$ID,$yearlevel,$status);
     $stmt->execute();
     header("location: librarypage.php?addmem=InsertComplete");
 ?>

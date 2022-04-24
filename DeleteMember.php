@@ -25,6 +25,6 @@ if(isset($_POST['delete_button'])){
     else {
         header("location: SearchMem.php?error=DeleteSqlFailed");
         exit();
-    } 
+    }  
 }
 ?>

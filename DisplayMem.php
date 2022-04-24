@@ -54,8 +54,11 @@ if(isset($_POST['submit_search_mem'])){ //when submit button is click
             Update Contact Number : <input class="input-fields" type="tel" name="contact" value="<?php echo $row['Contact'] ?>" required>
             <br><br><br><br>
             Update Type :
-            <input type="radio" name="Type" value="Student" <?php if ($row['Type'] == "Student") {echo "checked";} ?> required>Student
-            <input type="radio" name="Type" value="Teacher" <?php if ($row['Type'] == "Teacher") {echo "checked";} ?> required>Teacher
+            <input type="radio" name="ID" value="2" <?php if ($row['ID'] == "2") {echo "checked";} ?> required>2 For Teacher
+            <input type="radio" name="ID" value="20" <?php if ($row['ID'] == "20") {echo "checked";} ?> required>20 For Employee
+            <input type="radio" name="ID" value="21" <?php if ($row['ID'] == "21") {echo "checked";} ?> required>21 For Non-Teaching
+            <input type="radio" name="ID" value="22" <?php if ($row['ID'] == "22") {echo "checked";} ?> required>22 For Student
+            <input type="radio" name="ID" value="32" <?php if ($row['ID'] == "32") {echo "checked";} ?> required>32 For Contruction
             <br><br><br><br>
             Update Year Level :
             <input type="radio" name="yearlevel" value="First Year" <?php if ($row['YearLevel'] == "First Year") {echo "checked";} ?> required>First Year
@@ -76,7 +79,7 @@ if(isset($_POST['submit_search_mem'])){ //when submit button is click
             <br><br>
         </form>
         <button onclick='location="SearchMem.php"'>Back</button>
-    </div>
+    </div> 
 </div>
 <?php 
     }//closing bracket for line 21
